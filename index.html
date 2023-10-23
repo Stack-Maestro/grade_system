@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade System</title>
+    <style>
+        .only{
+           
+
+            margin-left: 500px;
+            margin-top: 300px;
+        }
+        @media(max-width:830px){
+            .only{
+                margin-left: 400px;
+                margin-top: 300px;
+            }
+          
+        }
+        @media(max-width:700px){
+            .only{
+                margin-left: 300px;
+                margin-top: 300px;
+            }
+          
+        }
+        @media(max-width:650px){
+            .only{
+                margin-left: 100px;
+                margin-top: 300px;
+            }
+          
+        }
+        @media(max-width:450px){
+            .only{
+                margin-left: 60px;
+                margin-top: 250px;
+            }
+          
+        }
+
+        @media(max-width:380px){
+            .only{
+                margin-left: 30px;
+                margin-top: 250px;
+            }
+          
+        }
+        @media(max-width:350px){
+            .only{
+                margin-left: 10px;
+                margin-top: 250px;
+            }
+          
+        }
+
+        
+    </style>
+</head>
+<body style="background-color: blue;">
+    <div class="only">
+        <input type="text" id="score">
+        <button onclick="grade()">CHECK GRADE</button>
+
+        <p id="result">
+
+        </p>
+    </div>
+    
+
+    <script>
+        function grade(){
+            let score,text;
+
+            score = document.getElementById('score').value;
+
+            if(score >= 70 && score <= 100){
+               // console.log('A')
+               //document.write('Your grade is A')
+               text= "Your score is A"
+               
+            }else if(score >= 60 && score < 70){
+               // console.log('B')
+               text= "Your score is B"
+            }else if(score >= 50 && score < 60){
+                //console.log('c')
+                text= "Your score is C"
+            }else if(score >= 45 && score < 50){
+                //console.log('D')
+                text= "Your score is D"
+            }else if(score >= 40 && score < 45){
+                //console.log('E')
+                text= "Your score is E"
+            }else if(score > 100 || score < 0){
+                //console.log('Invalid')  
+                text= "Invalid score"
+            }
+            else{
+                //console.log('F')
+                text= "Your score is F"
+            }
+            document.getElementById('result').innerHTML=text
+    
+        }
+       
+
+
+    </script>
+</body>
+</html>
